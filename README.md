@@ -1,17 +1,14 @@
-# docker-ansible [![pipeline-default-badge][]][pipeline-default-link]
+# docker-ansible
 
-[pipeline-default-badge]: https://gitlab.com/joeltimothyoh/docker-ansible/badges/master/pipeline.svg
-[pipeline-default-link]: https://gitlab.com/joeltimothyoh/docker-ansible/commits/master
+[![pipeline status](https://gitlab.com/leojonathanoh/docker-ansible/badges/dev/pipeline.svg)](https://gitlab.com/leojonathanoh/docker-ansible/commits/dev)
 
-Ansible on Docker on a variety of OS distributions.
+Dockerized `ansible` alpine image with some optional tools
 
-[![ansible-version-badge][]][ansible-metadata-link] [![ansible-layers-badge][]][ansible-metadata-link]
-
-[ansible-version-badge]: https://images.microbadger.com/badges/version/joeltimothyoh/ansible.svg
-[ansible-layers-badge]: https://images.microbadger.com/badges/image/joeltimothyoh/ansible.svg
-[ansible-metadata-link]: https://microbadger.com/images/joeltimothyoh/ansible
-
-[![ansible-dockerhub-badge][]][ansible-dockerhub-link]
-
-[ansible-dockerhub-badge]: https://img.shields.io/badge/docker%20hub-joeltimothyoh/ansible-blue.svg?logo=docker&logoColor=2596EC&color=C20000&label=&labelColor=&style=popout-square
-[ansible-dockerhub-link]: https://hub.docker.com/r/joeltimothyoh/ansible
+| Tags |
+|:-------:| 
+| `:2.6-alpine-3.8` | 
+| `:2.6-ssh-alpine-3.8` | 
+| `:2.7-alpine-3.9` | 
+| `:2.7-ssh-alpine-3.9` | 
+| `:2.8-alpine-3.10` | 
+| `:2.8-ssh-alpine-3.10` |

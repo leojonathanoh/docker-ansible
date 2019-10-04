@@ -1,3 +1,4 @@
+@'
 image: docker:latest
 services:
   - docker:dind
@@ -58,44 +59,17 @@ stages:
   # Log out of GitLab registry
   - docker logout "${CI_REGISTRY}"
 
-build-2.6-alpine-3.8:
-  <<: *build_definition
-  variables:
-    VARIANT_TAG: 2.6-alpine-3.8
-    VARIANT_TAG_WITH_VERSION: 2.6-alpine-3.8-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.8/2.6
+'@
 
-build-2.6-ssh-alpine-3.8:
-  <<: *build_definition
-  variables:
-    VARIANT_TAG: 2.6-ssh-alpine-3.8
-    VARIANT_TAG_WITH_VERSION: 2.6-ssh-alpine-3.8-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.8/2.6-ssh
+$( $VARIANTS | % {
+@"
 
-build-2.7-alpine-3.9:
+build-$( $_['tag'] ):
   <<: *build_definition
   variables:
-    VARIANT_TAG: 2.7-alpine-3.9
-    VARIANT_TAG_WITH_VERSION: 2.7-alpine-3.9-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.9/2.7
+    VARIANT_TAG: $( $_['tag'] )
+    VARIANT_TAG_WITH_VERSION: $( $_['tag'] )-`$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: $( $_['build_dir_rel'] )
 
-build-2.7-ssh-alpine-3.9:
-  <<: *build_definition
-  variables:
-    VARIANT_TAG: 2.7-ssh-alpine-3.9
-    VARIANT_TAG_WITH_VERSION: 2.7-ssh-alpine-3.9-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.9/2.7-ssh
-
-build-2.8-alpine-3.10:
-  <<: *build_definition
-  variables:
-    VARIANT_TAG: 2.8-alpine-3.10
-    VARIANT_TAG_WITH_VERSION: 2.8-alpine-3.10-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.10/2.8
-
-build-2.8-ssh-alpine-3.10:
-  <<: *build_definition
-  variables:
-    VARIANT_TAG: 2.8-ssh-alpine-3.10
-    VARIANT_TAG_WITH_VERSION: 2.8-ssh-alpine-3.10-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.10/2.8-ssh
+"@
+})
