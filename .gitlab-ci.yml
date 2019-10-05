@@ -58,44 +58,72 @@ stages:
   # Log out of GitLab registry
   - docker logout "${CI_REGISTRY}"
 
-build-v2.6-alpine-3.8:
+build-v2.3.0.0-alpine-3.6:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.6-alpine-3.8
-    VARIANT_TAG_WITH_VERSION: v2.6-alpine-3.8-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.8/v2.6
+    VARIANT_TAG: v2.3.0.0-alpine-3.6
+    VARIANT_TAG_WITH_VERSION: v2.3.0.0-alpine-3.6-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.3.0.0-alpine-3.6
 
-build-v2.6-ssh-alpine-3.8:
+build-v2.3.0.0-ssh-alpine-3.6:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.6-ssh-alpine-3.8
-    VARIANT_TAG_WITH_VERSION: v2.6-ssh-alpine-3.8-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.8/v2.6-ssh
+    VARIANT_TAG: v2.3.0.0-ssh-alpine-3.6
+    VARIANT_TAG_WITH_VERSION: v2.3.0.0-ssh-alpine-3.6-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.3.0.0-ssh-alpine-3.6
 
-build-v2.7-alpine-3.9:
+build-v2.4.6.0-alpine-3.7:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.7-alpine-3.9
-    VARIANT_TAG_WITH_VERSION: v2.7-alpine-3.9-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.9/v2.7
+    VARIANT_TAG: v2.4.6.0-alpine-3.7
+    VARIANT_TAG_WITH_VERSION: v2.4.6.0-alpine-3.7-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.4.6.0-alpine-3.7
 
-build-v2.7-ssh-alpine-3.9:
+build-v2.4.6.0-ssh-alpine-3.7:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.7-ssh-alpine-3.9
-    VARIANT_TAG_WITH_VERSION: v2.7-ssh-alpine-3.9-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.9/v2.7-ssh
+    VARIANT_TAG: v2.4.6.0-ssh-alpine-3.7
+    VARIANT_TAG_WITH_VERSION: v2.4.6.0-ssh-alpine-3.7-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.4.6.0-ssh-alpine-3.7
 
-build-v2.8-alpine-3.10:
+build-v2.6.19-alpine-3.8:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.8-alpine-3.10
-    VARIANT_TAG_WITH_VERSION: v2.8-alpine-3.10-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.10/v2.8
+    VARIANT_TAG: v2.6.19-alpine-3.8
+    VARIANT_TAG_WITH_VERSION: v2.6.19-alpine-3.8-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.6.19-alpine-3.8
 
-build-v2.8-ssh-alpine-3.10:
+build-v2.6.19-ssh-alpine-3.8:
   <<: *build_definition
   variables:
-    VARIANT_TAG: v2.8-ssh-alpine-3.10
-    VARIANT_TAG_WITH_VERSION: v2.8-ssh-alpine-3.10-$CI_COMMIT_REF_NAME
-    VARIANT_BUILD_DIR: variants/alpine-3.10/v2.8-ssh
+    VARIANT_TAG: v2.6.19-ssh-alpine-3.8
+    VARIANT_TAG_WITH_VERSION: v2.6.19-ssh-alpine-3.8-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.6.19-ssh-alpine-3.8
+
+build-v2.7.13-alpine-3.9:
+  <<: *build_definition
+  variables:
+    VARIANT_TAG: v2.7.13-alpine-3.9
+    VARIANT_TAG_WITH_VERSION: v2.7.13-alpine-3.9-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.7.13-alpine-3.9
+
+build-v2.7.13-ssh-alpine-3.9:
+  <<: *build_definition
+  variables:
+    VARIANT_TAG: v2.7.13-ssh-alpine-3.9
+    VARIANT_TAG_WITH_VERSION: v2.7.13-ssh-alpine-3.9-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.7.13-ssh-alpine-3.9
+
+build-v2.8.4-alpine-3.10:
+  <<: *build_definition
+  variables:
+    VARIANT_TAG: v2.8.4-alpine-3.10
+    VARIANT_TAG_WITH_VERSION: v2.8.4-alpine-3.10-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.8.4-alpine-3.10
+
+build-v2.8.4-ssh-alpine-3.10:
+  <<: *build_definition
+  variables:
+    VARIANT_TAG: v2.8.4-ssh-alpine-3.10
+    VARIANT_TAG_WITH_VERSION: v2.8.4-ssh-alpine-3.10-$CI_COMMIT_REF_NAME
+    VARIANT_BUILD_DIR: variants/v2.8.4-ssh-alpine-3.10
