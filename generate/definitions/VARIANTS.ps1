@@ -2,7 +2,7 @@
 $local:VARIANTS_MATRIX = @(
     @{
         package = 'ansible'
-        package_version = 'v2.3.0.0'
+        package_version = '2.3.0.0-r1'
         distro = 'alpine'
         distro_version = '3.6'
         subvariants = @(
@@ -12,7 +12,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = 'v2.4.6.0'
+        package_version = '2.4.6.0-r1'
         distro = 'alpine'
         distro_version = '3.7'
         subvariants = @(
@@ -22,7 +22,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = 'v2.6.19'
+        package_version = '2.6.19-r0'
         distro = 'alpine'
         distro_version = '3.8'
         subvariants = @(
@@ -32,7 +32,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = 'v2.7.13'
+        package_version = '2.7.13-r0'
         distro = 'alpine'
         distro_version = '3.9'
         subvariants = @(
@@ -42,7 +42,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = 'v2.8.4'
+        package_version = '2.8.4-r0'
         distro = 'alpine'
         distro_version = '3.10'
         subvariants = @(
@@ -58,12 +58,13 @@ $VARIANTS = @(
                 _metadata = @{
                     package = $variant['package']
                     package_version = $variant['package_version']
+                    package_version_semver = "v$( $variant['package_version'] )" -replace '-r\d+', ''
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     components = $subVariant['components']
                 }
                 tag = @(
-                        $variant['package_version']
+                        "v$( $variant['package_version'] )" -replace '-r\d+', ''
                         $subVariant['components'] | ? { $_ }
                         $variant['distro']
                         $variant['distro_version']
