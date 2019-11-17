@@ -6,8 +6,8 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.6'
         subvariants = @(
-            @{ components = $null }
-            @{ components = 'ssh' }
+            @{ components = @() }
+            @{ components = @( 'ssh' ) }
         )
     }
     @{
@@ -16,8 +16,8 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.7'
         subvariants = @(
-            @{ components = $null }
-            @{ components = 'ssh' }
+            @{ components = @() }
+            @{ components = @( 'ssh' ) }
         )
     }
     @{
@@ -26,8 +26,8 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.8'
         subvariants = @(
-            @{ components = $null }
-            @{ components = 'ssh' }
+            @{ components = @() }
+            @{ components = @( 'ssh' ) }
         )
     }
     @{
@@ -36,8 +36,8 @@ $local:VARIANTS_MATRIX = @(
         distro = 'alpine'
         distro_version = '3.9'
         subvariants = @(
-            @{ components = $null }
-            @{ components = 'ssh' }
+            @{ components = @() }
+            @{ components = @( 'ssh' ) }
         )
     }
     @{
@@ -47,7 +47,7 @@ $local:VARIANTS_MATRIX = @(
         distro_version = '3.10'
         subvariants = @(
             @{ components = $null }
-            @{ components = 'ssh' }
+            @{ components = @( 'ssh' ) }
         )
     }
 )
