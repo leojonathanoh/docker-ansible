@@ -55,16 +55,18 @@ $VARIANTS = @(
     foreach ($variant in $VARIANTS_MATRIX){
         foreach ($subVariant in $variant['subvariants']) {
             @{
+                # Metadata object
                 _metadata = @{
                     package = $variant['package']
                     package_version = $variant['package_version']
-                    package_version_semver = "v$( $variant['package_version'] )" -replace '-r\d+', ''
+                    package_version_semver = "v$( $variant['package_version'] )" -replace '-r\d+', ''   # E.g. Strip out the '-r' in '2.3.0.0-r1'
                     distro = $variant['distro']
                     distro_version = $variant['distro_version']
                     components = $subVariant['components']
                 }
+                # Docker image tag. E.g. 'v2.3.0.0-alpine-3.6'
                 tag = @(
-                        "v$( $variant['package_version'] )" -replace '-r\d+', ''
+                        "v$( $variant['package_version'] )" -replace '-r\d+', ''    # E.g. Strip out the '-r' in '2.3.0.0-r1'
                         $subVariant['components'] | ? { $_ }
                         $variant['distro']
                         $variant['distro_version']
