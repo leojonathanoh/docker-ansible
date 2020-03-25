@@ -14,7 +14,7 @@ Dockerized `ansible` alpine image with some optional tools
 | `:v2.4.6.0-ssh-alpine-3.7` | 
 | `:v2.6.20-alpine-3.8` | 
 | `:v2.6.20-ssh-alpine-3.8` | 
-| `:v2.7.14-alpine-3.9` | 
-| `:v2.7.14-ssh-alpine-3.9` | 
+| `:v2.7.16-alpine-3.9` | 
+| `:v2.7.16-ssh-alpine-3.9` | 
 | `:v2.8.6-alpine-3.10` | 
 | `:v2.8.6-ssh-alpine-3.10` |
