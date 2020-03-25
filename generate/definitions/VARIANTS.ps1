@@ -50,6 +50,16 @@ $local:VARIANTS_MATRIX = @(
             @{ components = @( 'ssh' ) }
         )
     }
+    @{
+        package = 'ansible'
+        package_version = '2.9.6-r0'
+        distro = 'alpine'
+        distro_version = '3.11'
+        subvariants = @(
+            @{ components = $null }
+            @{ components = @( 'ssh' ) }
+        )
+    }
 )
 $VARIANTS = @(
     foreach ($variant in $VARIANTS_MATRIX){
