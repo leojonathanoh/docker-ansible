@@ -59,6 +59,7 @@ $local:VARIANTS_MATRIX = @(
             @{ components = $null }
             @{ components = @( 'ssh' ) }
         )
+        tag_as_latest = $true
     }
 )
 $VARIANTS = @(
@@ -81,6 +82,11 @@ $VARIANTS = @(
                         $variant['distro']
                         $variant['distro_version']
                 ) -join '-'
+                tag_as_latest = if ( $variant.Contains('tag_as_latest') ) {
+                    $variant['tag_as_latest']
+                } else {
+                    $false
+                }
             }
         }
     }
