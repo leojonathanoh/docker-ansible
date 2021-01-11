@@ -32,7 +32,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.7.16-r0'
+        package_version = '2.7.17-r0'
         distro = 'alpine'
         distro_version = '3.9'
         subvariants = @(
@@ -42,7 +42,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.8.9-r0'
+        package_version = '2.8.16-r0'
         distro = 'alpine'
         distro_version = '3.10'
         subvariants = @(
@@ -52,7 +52,7 @@ $local:VARIANTS_MATRIX = @(
     }
     @{
         package = 'ansible'
-        package_version = '2.9.6-r0'
+        package_version = '2.9.14-r0'
         distro = 'alpine'
         distro_version = '3.11'
         subvariants = @(
